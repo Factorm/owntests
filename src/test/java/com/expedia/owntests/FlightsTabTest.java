@@ -23,7 +23,7 @@ public class FlightsTabTest {
 
 	@BeforeClass
 	public void beforeClass() {
-		report = new ExtentReports("E://Development//workspace - Mariusz//TestNGTutorial//reports//logintest.html");
+		report = new ExtentReports("E://Development//FlightsTabTest.html");
 		test = report.startTest("Verify Welcome Text");
 		
 		System.setProperty("webdriver.chrome.driver", "E://Development//workspace - Mariusz//Selenium//chromedriver.exe");
@@ -44,6 +44,7 @@ public class FlightsTabTest {
 	@AfterClass
 	public void afterClass() throws Exception {
 		test.log(LogStatus.PASS, "Test passed");
+		Thread.sleep(2000);
 		driver.quit();
 		test.log(LogStatus.INFO, "Browser Ended...");
 		report.endTest(test);
@@ -57,6 +58,9 @@ public class FlightsTabTest {
 		hp.clickRoundtripTab();
 		hp.enterFlyingFrom("Now York");
 		hp.enterFlyingTo("Chicago");
-		
+		hp.enterDeparting("10/24/2017");
+		hp.enterReturning("10/30/2017");
+		hp.enterAdults("2");
+		hp.enterChildren("0");
 	}
 }

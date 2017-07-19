@@ -27,7 +27,7 @@ public class HomePage {
 	public void clickRoundtripTab() {
 		WebElement RoundtripTab = driver.findElement(By.id("flight-type-roundtrip-label-hp-flight"));
 		RoundtripTab.click();
-		test.log(LogStatus.INFO, "FlightTab clicked");
+		test.log(LogStatus.INFO, "RoundtripTab clicked");
 	}
 
 	public void enterFlyingFrom(String textFrom) {
@@ -42,4 +42,27 @@ public class HomePage {
 		test.log(LogStatus.INFO, "To Flying To put: " + textTo);
 	}
 	
+	public void enterDeparting(String textDeparting) {
+		WebElement DepartingBox = driver.findElement(By.id("flight-departing-hp-flight"));
+		DepartingBox.sendKeys(textDeparting);
+		test.log(LogStatus.INFO, "To Departing To put: " + textDeparting);
+	}
+	
+	public void enterReturning(String textReturning) {
+		WebElement ReturningBox = driver.findElement(By.id("flight-returning-hp-flight"));
+		ReturningBox.sendKeys(textReturning);
+		test.log(LogStatus.INFO, "To Returing To put: " + textReturning);
+	}
+	
+	public void enterAdults(String textAdults) {
+		WebElement AdultsBox = driver.findElement(By.id("flight-adults-hp-flight"));
+		AdultsBox.sendKeys(textAdults);
+		test.log(LogStatus.INFO, "To Adults To put: " + textAdults);
+	}
+	
+	public void enterChildren(String textChildren) {
+		WebElement ChildrenBox = driver.findElement(By.id("flight-children-hp-flight"));
+		ChildrenBox.sendKeys(textChildren);
+		test.log(LogStatus.INFO, "To Children To put: " + textChildren);
+	}
 }
