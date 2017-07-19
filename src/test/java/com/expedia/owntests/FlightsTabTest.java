@@ -11,12 +11,14 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import pageclasses.HomePage;
 
 public class FlightsTabTest {
 	private WebDriver driver;
 	private String baseUrl;
 	ExtentReports report;
 	ExtentTest test;
+	private HomePage hp;
 	
 
 	@BeforeClass
@@ -27,6 +29,7 @@ public class FlightsTabTest {
 		System.setProperty("webdriver.chrome.driver", "E://Development//workspace - Mariusz//Selenium//chromedriver.exe");
 		
 		driver = new ChromeDriver();
+		hp = new HomePage(driver, test);
 		baseUrl = "https://www.expedia.com/";
 		test.log(LogStatus.INFO, "Browser Started...");
 		
@@ -49,6 +52,11 @@ public class FlightsTabTest {
 	
 
 	@Test
-	public void f() {
+	public void test1() {
+		hp.clickFlightTab();
+		hp.clickRoundtripTab();
+		hp.enterFlyingFrom("Now York");
+		hp.enterFlyingTo("Chicago");
+		
 	}
 }
