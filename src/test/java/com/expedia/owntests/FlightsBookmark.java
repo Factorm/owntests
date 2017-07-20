@@ -43,7 +43,7 @@ public class FlightsBookmark {
 		ow = PageFactory.initElements(driver, OneWay.class);
 		mc = PageFactory.initElements(driver, Multicity.class);
 		
-		rt.clickFlightTab();
+		driver.findElement(By.id("tab-flight-tab-hp")).click();;
 	}
 
 	@AfterMethod
@@ -107,7 +107,7 @@ public class FlightsBookmark {
 	}
 
 	/*@Test
-	public void multicityTest() throws InterruptedException {
+	public void multicityTest() {
 
 		mc.clickMulticityTab();
 		mc.enterFlyingFrom("New York");
