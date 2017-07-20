@@ -135,5 +135,4 @@ public class FlightsBookmark {
 
 		Assert.assertTrue(verificationText != null);
 	}*/
-
 }
