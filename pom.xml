@@ -48,7 +48,7 @@
 						<version>2.18.1</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>FlightsBookmark.xml</suiteXmlFile>
+								<suiteXmlFile>flightsbookmark.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
