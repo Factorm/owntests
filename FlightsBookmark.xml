@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suit name="Own tests">
+<suite name="Own tests">
 	<test name="FlightsTabTest">
-	<classes>
-	<class name="com.expedia.owntests.FlightsBookmark"></class>
-	</classes>
+		<classes>
+			<class name="com.expedia.owntests.FlightsBokmark"></class>
+		</classes>
 	</test>
-</suit>
+</suite>
