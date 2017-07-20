@@ -23,6 +23,7 @@ public class FlightTab {
 	By flightTab = By.id("tab-flight-tab-hp");
 	By roundtripTab = By.id("flight-type-roundtrip-label-hp-flight");
 	By oneWayTab = By.id("flight-type-one-way-label-hp-flight");
+	By multicityTab = By.id("flight-type-multi-dest-label-hp-flight");
 	By flyingFrom = By.id("flight-origin-hp-flight");
 	By flyingTo = By.id("flight-destination-hp-flight");
 	By adults = By.id("flight-adults-hp-flight");
@@ -44,6 +45,11 @@ public class FlightTab {
 	public void clickoneWayTab() {
 		driver.findElement(oneWayTab).click();
 		test.log(LogStatus.INFO, "OneWayTab clicked");
+	}
+	
+	public void clickMulticityTab() {
+		driver.findElement(multicityTab).click();
+		test.log(LogStatus.INFO, "multicityTab clicked");
 	}
 
 	public void enterFlyingFrom(String textFrom) {
