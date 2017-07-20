@@ -48,7 +48,7 @@
 						<version>2.18.1</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>FlightsTabTest.xml</suiteXmlFile>
+								<suiteXmlFile>FlightsBookmark.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
