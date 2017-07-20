@@ -5,12 +5,11 @@
     <classes>
       <class name="com.expedia.owntests.FlightsBookmark">
         <methods>
-          <include name="RoundtripTest"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="beforeMethod"/>
-          <include name="oneWayTest"/>
           <include name="beforeClass"/>
+          <include name="multicityTest"/>
         </methods>
       </class> <!-- com.expedia.owntests.FlightsBookmark -->
     </classes>

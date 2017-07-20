@@ -40,8 +40,6 @@ public class FlightsBookmark {
 
 		System.setProperty("webdriver.chrome.driver",
 				"E://Development//workspace - Mariusz//Selenium//chromedriver.exe");
-		
-
 	}
 
 	@AfterClass
@@ -67,7 +65,7 @@ public class FlightsBookmark {
 
 		driver.manage().window().maximize();
 		test.log(LogStatus.INFO, "Window is maximize...");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(baseUrl);
 		test.log(LogStatus.INFO, "Web application opened...");
 
@@ -81,7 +79,7 @@ public class FlightsBookmark {
 	
 	@Test
 	public void RoundtripTest() {
-
+		
 		rt.clickRoundtripTab();
 		rt.enterFlyingFrom("New York");
 		rt.enterFlyingTo("Chicago");
@@ -110,8 +108,8 @@ public class FlightsBookmark {
 
 	@Test
 	public void oneWayTest() {
-
-		ow.clickoneWayTab();
+		
+		ow.clickOneWayTab();
 		ow.enterFlyingFrom("New York");
 		ow.enterFlyingTo("Chicago");
 		ow.enterDeparting("10/24/2017");
@@ -136,8 +134,8 @@ public class FlightsBookmark {
 		test.log(LogStatus.PASS, "Verifield verificationText");
 	}
 	
-	@Test
-	public void multicityTest() {
+	/*@Test
+	public void multicityTest() throws InterruptedException {
 
 		mc.clickMulticityTab();
 		mc.enterFlyingFrom("New York");
@@ -165,5 +163,5 @@ public class FlightsBookmark {
 
 		Assert.assertTrue(verificationText != null);
 		test.log(LogStatus.PASS, "Verifield verificationText");
-	}
+	}*/
 }

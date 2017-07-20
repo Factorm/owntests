@@ -13,7 +13,6 @@ public class FlightTab {
 
 	ExtentTest test;
 	protected WebDriver driver = null;
-	// public static WebElement element = null;
 
 	public FlightTab(WebDriver driver, ExtentTest test) {
 		this.driver = driver;
@@ -23,7 +22,7 @@ public class FlightTab {
 	By flightTab = By.id("tab-flight-tab-hp");
 	By roundtripTab = By.id("flight-type-roundtrip-label-hp-flight");
 	By oneWayTab = By.id("flight-type-one-way-label-hp-flight");
-	By multicityTab = By.id("flight-type-multi-dest-label-hp-flight");
+	By multicityTab = By.id("flight-type-multi-dest-hp-flight");
 	By flyingFrom = By.id("flight-origin-hp-flight");
 	By flyingTo = By.id("flight-destination-hp-flight");
 	By adults = By.id("flight-adults-hp-flight");
@@ -42,7 +41,7 @@ public class FlightTab {
 		test.log(LogStatus.INFO, "RoundtripTab clicked");
 	}
 
-	public void clickoneWayTab() {
+	public void clickOneWayTab() {
 		driver.findElement(oneWayTab).click();
 		test.log(LogStatus.INFO, "OneWayTab clicked");
 	}
@@ -86,7 +85,7 @@ public class FlightTab {
 				list.click();
 			}
 		}
-		test.log(LogStatus.INFO, "Preferred class chosed");
+		test.log(LogStatus.INFO, "Preferred class chosed:" + chose);
 	}
 
 	public void clickSearchButton() {
