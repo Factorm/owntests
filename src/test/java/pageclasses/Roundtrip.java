@@ -1,28 +1,30 @@
 package pageclasses;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class Roundtrip extends FlightTab{
 
-	public Roundtrip(WebDriver driver, ExtentTest test) {
-		super(driver, test);
+	public Roundtrip(WebDriver driver) {
+		super(driver);
 		// TODO Auto-generated constructor stub
 	}
 	
-	By departingRoundtrip = By.id("flight-departing-hp-flight");
-	By returning = By.id("flight-returning-hp-flight");
+	@FindBy(id="flight-departing-hp-flight")
+	WebElement departingRoundtrip;
+	
+	@FindBy(id="flight-returning-hp-flight")
+	WebElement returning;
 	
 	public void enterDeparting(String textDeparting) {
-		driver.findElement(departingRoundtrip).sendKeys(textDeparting);
-		test.log(LogStatus.INFO, "To Departing To put: " + textDeparting);
+		departingRoundtrip.sendKeys(textDeparting);
 	}
 	
 	public void enterReturning(String textReturning) {
-		driver.findElement(returning).sendKeys(textReturning);
-		test.log(LogStatus.INFO, "To Returing To put: " + textReturning);
+		returning.sendKeys(textReturning);
 	}
 }
