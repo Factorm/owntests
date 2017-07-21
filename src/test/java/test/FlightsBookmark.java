@@ -120,7 +120,7 @@ public class FlightsBookmark {
 		mc.enterAdults("2");
 		mc.enterChildren("0");
 		mc.enterFlight2FlyingFrom("Chicago");
-		mc.enterFlight2FlyingTo("Warsaw, Poland");
+		mc.enterFlight2FlyingTo("London");
 		mc.enterFlight2Departing("10/26/2017");
 		mc.clickAdvancedOption();
 		mc.chosePreferredClass("Business");
