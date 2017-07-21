@@ -2,7 +2,7 @@
 <suite name="Own tests">
 	<test name="FlightsTabTest">
 		<classes>
-			<class name="com.expedia.owntests.FlightsBookmark"></class>
+			<class name="test.FlightsBookmark"></class>
 		</classes>
 	</test>
 </suite>
