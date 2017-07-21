@@ -2,13 +2,13 @@ package extentreports;
 
 import com.relevantcodes.extentreports.ExtentReports;
 
-public class ExtentFactory {
+public class ExtentManager {
 
 	public static ExtentReports getInstance() {
 		ExtentReports extent;
-		String Path = "E://Development//workspace - Mariusz//TestNGTutorial//reports//logintest.html";
+		String Path = System.getProperty("user.dir") + "//test-output//LOGs.html";
 		extent = new ExtentReports(Path, false);
-		extent.addSystemInfo("Selenium Version", "2.52").addSystemInfo("Platform", "Windows");
+		extent.addSystemInfo("Selenium Version", "3.4.0").addSystemInfo("Platform", "Windows 10");
 		
 		return extent;
 	}

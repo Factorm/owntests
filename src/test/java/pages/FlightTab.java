@@ -1,4 +1,4 @@
-package pageclasses;
+package pages;
 
 import java.util.List;
 
@@ -10,12 +10,16 @@ import org.openqa.selenium.support.FindBy;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class FlightTab {
+import test.FlightsBookmark;
+
+public class FlightTab extends FlightsBookmark {
 
 	protected WebDriver driver = null;
+	protected ExtentTest test;
 
-	public FlightTab(WebDriver driver) {
+	public FlightTab(WebDriver driver, ExtentTest test) {
 		this.driver = driver;
+		this.test = test;
 	}
 
 	@FindBy(id = "tab-flight-tab-hp")
@@ -27,7 +31,7 @@ public class FlightTab {
 	@FindBy(id = "flight-type-one-way-label-hp-flight")
 	WebElement oneWayTab;
 
-	@FindBy(id = "flight-type-multi-dest-hp-flight")
+	@FindBy(id = "flight-type-multi-dest-label-hp-flight")
 	WebElement multicityTab;
 
 	@FindBy(id = "flight-origin-hp-flight")
@@ -51,80 +55,74 @@ public class FlightTab {
 	@FindBy(xpath = "//section[@id='section-flight-tab-hp']//button[@type='submit']")
 	WebElement searchButton;
 
-	/*
-	 * By flightTab = By.id("tab-flight-tab-hp"); By roundtripTab =
-	 * By.id("flight-type-roundtrip-label-hp-flight"); By oneWayTab =
-	 * By.id("flight-type-one-way-label-hp-flight"); By multicityTab =
-	 * By.id("flight-type-multi-dest-hp-flight"); By flyingFrom =
-	 * By.id("flight-origin-hp-flight"); By flyingTo =
-	 * By.id("flight-destination-hp-flight"); By adults =
-	 * By.id("flight-adults-hp-flight"); By children =
-	 * By.id("flight-children-hp-flight"); By advancedOptions =
-	 * By.id("flight-advanced-options-hp-flight"); By preferredCLass =
-	 * By.id("flight-advanced-preferred-class-hp-flight"); By searchButton =
-	 * By.xpath("//section[@id='section-flight-tab-hp']//button[@type='submit']"
-	 * );
-	 */
-
 	public void clickFlightTab() {
 		flightTab.click();
+		test.log(LogStatus.INFO, "Flight tab is clicked");
 
 	}
 
 	public void clickRoundtripTab() {
 		roundtripTab.click();
-
+		test.log(LogStatus.INFO, "Roundtrip is clicked");
 	}
 
 	public void clickOneWayTab() {
 		oneWayTab.click();
+		test.log(LogStatus.INFO, "One Way is clicked");
 
 	}
 
 	public void clickMulticityTab() {
 		multicityTab.click();
+		test.log(LogStatus.INFO, "Multi-City is clicked");
 
 	}
 
-	public void enterFlyingFrom(String textFrom) {
-		flyingFrom.sendKeys(textFrom);
+	public void enterFlyingFrom(String text) {
+		flyingFrom.sendKeys(text);
+		test.log(LogStatus.INFO, "To 'Flying From' entered: " + text);
 
 	}
 
-	public void enterFlyingTo(String textTo) {
-		flyingTo.sendKeys(textTo);
+	public void enterFlyingTo(String text) {
+		flyingTo.sendKeys(text);
+		test.log(LogStatus.INFO, "To 'Flying To' entered: " + text);
 
 	}
 
-	public void enterAdults(String textAdults) {
-		adults.sendKeys(textAdults);
+	public void enterAdults(String text) {
+		adults.sendKeys(text);
+		test.log(LogStatus.INFO, "To 'Adults' entered: " + text);
 
 	}
 
-	public void enterChildren(String textChildren) {
-		children.sendKeys(textChildren);
+	public void enterChildren(String text) {
+		children.sendKeys(text);
+		test.log(LogStatus.INFO, "To 'Children' entered: " + text);
 
 	}
 
 	public void clickAdvancedOption() {
 		advancedOptions.click();
+		test.log(LogStatus.INFO, "Advanced Option is clicked");
 
 	}
 
 	public void chosePreferredClass(String chose) {
-		WebElement element = preferredClass;
-		List<WebElement> lists = element.findElements(By.tagName("option"));
+		List<WebElement> results = preferredClass.findElements(By.tagName("option"));
 
-		for (WebElement list : lists) {
-			if (list.getText().equals(chose)) {
-				list.click();
+		for (WebElement result : results) {
+			if (result.getText().equals(chose)) {
+				result.click();
 			}
 		}
-
+		test.log(LogStatus.INFO, "To 'Preferred Class' entered: " + chose);
 	}
 
 	public void clickSearchButton() {
 		searchButton.click();
+		test.log(LogStatus.INFO, "Search Button is clicked");
 
 	}
+
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Own tests]">
+  <listeners>
+    <listener class-name="extentreports.ExtentReporterNG"/>
+  </listeners>
+  <test name="FlightsTabTest(failed)">
+    <classes>
+      <class name="com.expedia.owntests.FlightsBookmark">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="beforeMethod"/>
+          <include name="multicityTest"/>
+        </methods>
+      </class> <!-- com.expedia.owntests.FlightsBookmark -->
+    </classes>
+  </test> <!-- FlightsTabTest(failed) -->
+</suite> <!-- Failed suite [Own tests] -->

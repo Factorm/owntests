@@ -3,15 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.expedia.owntests.FlightsBookmark">
+      <class name="test.FlightsBookmark">
         <methods>
-          <include name="RoundtripTest"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="oneWayTest"/>
           <include name="multicityTest"/>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.expedia.owntests.FlightsBookmark -->
+      </class> <!-- test.FlightsBookmark -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
