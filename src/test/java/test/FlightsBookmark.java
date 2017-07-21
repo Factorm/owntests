@@ -68,7 +68,7 @@ public class FlightsBookmark {
 	}
 
 	@Test(priority = 0)
-	public void RoundtripTest() {
+	public void roundtripTest() {
 
 		rt = new Roundtrip(driver, test);
 
